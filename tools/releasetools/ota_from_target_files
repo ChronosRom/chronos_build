@@ -467,18 +467,17 @@ def WriteFullOTAPackage(input_zip, output_zip):
     script.Print("Formatting Data")
     script.FormatPartition("/data")
 
-  script.Print("******************************************");
-  script.Print("*       _____ ____          _____        *");
-  script.Print("*      |_   _/ __ \   /\   |  __ \       *");
-  script.Print("*        | || |  | | /  \  | |__) |      *");
-  script.Print("*        | || |  | |/ /\ \ |  ___/       *");
-  script.Print("*       _| || |__| / ____ \| |           *");
-  script.Print("*      |_____\____/_/    \_\_|           *");
-  script.Print("*                                        *");
-  script.Print("******************************************");
-  script.Print("******************************************");
-  script.Print("*********** IOAP KITKAT BUILD ************");
-  script.Print("******************************************");
+  script.Print("*******************************************");
+  script.Print("*    ___ _                                *");
+  script.Print("*   / __\ |__  _ __ ___  _ __   ___  ___  *");
+  script.Print("*  / /  | '_ \| '__/ _ \| '_ \ / _ \/ __| *");
+  script.Print("* / /___| | | | | | (_) | | | | (_) \__ \ *");
+  script.Print("* \____/|_| |_|_|  \___/|_| |_|\___/|___/ *");
+  script.Print("*                                         *");
+  script.Print("*******************************************");
+  script.Print("*******************************************");
+  script.Print("********** CHRONOS KITKAT BUILD ***********");
+  script.Print("*******************************************");
 
   device = GetBuildProp("ro.cm.device", OPTIONS.info_dict)
   script.Print("Device: %s"%(device));
@@ -516,7 +515,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.WriteRawImage("/boot", "boot.img")
 
   script.ShowProgress(0.1, 0)
-  script.Print("Enjoy IOAP!");
+  script.Print("Enjoy ChronosRom!");
   device_specific.FullOTA_InstallEnd()
 
   if OPTIONS.extra_script is not None:
